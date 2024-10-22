@@ -3,7 +3,6 @@
   
   {% for block in section.blocks %}
     <div class="testimonial">
-      <img src="{{ block.settings.customer_image | img_url: 'medium' }}" alt="{{ block.settings.customer_name }}">
       <p>{{ block.settings.testimonial_text }}</p>
       <strong>{{ block.settings.customer_name }}</strong>
     </div>
@@ -41,11 +40,6 @@
           "type": "textarea",
           "id": "testimonial_text",
           "label": "Testimonial Text"
-        },
-        {
-          "type": "image_picker",
-          "id": "customer_image",
-          "label": "Customer Image"
         }
       ]
     }
