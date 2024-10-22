@@ -26,33 +26,20 @@
 
 {% schema %}
 {
-  "name": "Feedback Form",
+  "name": "Custom Section",
   "tag": "section",
-  "class": "section",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
-  "blocks": [
-     {
-       "name": "Input",
-       "type": "richtext",
-       "settings": [
-         {
-           "type": "richtext",
-           "id": "image",
-           "label": "Image"
-         }
-       ]
-     }
-   ],
-  "presets": [
+  "class": "custom-section",
+  "settings": [
     {
-      "name": "t:sections.contact-form.presets.name",
-      "blocks": [
-        {
-          "type": "richtext"
-        }
-      ]
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "My Custom Section"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content"
     }
   ]
 }
