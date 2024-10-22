@@ -1,4 +1,5 @@
 <div>
+  <p>Hello</p>
   {% for block in section.blocks %}
       <div class="slide" {{ block.shopify_attributes }}>
         {{ block.settings.image | image_url: width: 2048 | image_tag }}
