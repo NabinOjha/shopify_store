@@ -12,6 +12,8 @@
     "custom-fields": {
       "type": "custom-page-fields",
       "settings": {
+        "title": "Custom Section",
+        "description": "Custom Section Description"
       }
     }
   },
