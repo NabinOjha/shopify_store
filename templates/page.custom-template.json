@@ -9,11 +9,6 @@
  */
 {
   "sections": {
-    "custom-fields": {
-      "type": "custom-page-fields",
-      "settings": {
-      }
-    },
     "custom_page_fields_JtKEM8": {
       "type": "custom-page-fields",
       "blocks": {
@@ -22,6 +17,13 @@
           "settings": {
             "customer_name": "Jane Smith",
             "testimonial_text": "Absolutely fantastic service!"
+          }
+        },
+        "testimonial_VkLwgh": {
+          "type": "testimonial",
+          "settings": {
+            "customer_name": "Nabin Ojha",
+            "testimonial_text": "Best Site Ever"
           }
         },
         "testimonial_BTNabm": {
@@ -34,6 +36,7 @@
       },
       "block_order": [
         "testimonial_7iLpVx",
+        "testimonial_VkLwgh",
         "testimonial_BTNabm"
       ],
       "settings": {
@@ -41,7 +44,6 @@
     }
   },
   "order": [
-    "custom-fields",
     "custom_page_fields_JtKEM8"
   ]
 }
