@@ -1,7 +1,11 @@
 <div class="{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-  {%- for block in section.blocks -%}
-    {% render block %}
-  {%- endfor -%}
+   {% if section.blocks.size > 0 %}
+    {%- for block in section.blocks -%}
+      {% render block %}
+    {%- endfor -%}
+  {% else %}
+     <p>No Block found</p>
+  {% endif %}
 </div>
 
 {% schema %}
