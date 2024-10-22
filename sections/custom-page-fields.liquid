@@ -3,6 +3,10 @@
   {% if section.blocks.size > 0 %}
     {% for block in section.blocks %}
       {% case block.type %}
+        {% when "email" %}
+        <p>Email</p>
+        {% when "feeback" %}
+        <p>Feedback</p>
       {% endcase %}
     {% endfor %}
   {% else %}
