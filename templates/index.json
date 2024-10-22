@@ -14,8 +14,9 @@
       "blocks": {
         "heading": {
           "type": "heading",
+          "source": "{{ localization.market.metafields.custom.store_info.value }}",
           "settings": {
-            "heading": "Browse our latest products",
+            "heading": "Buy Products from{{ localization.market.metafields.custom.store_info.value.name.value }}",
             "heading_size": "h0"
           }
         },
