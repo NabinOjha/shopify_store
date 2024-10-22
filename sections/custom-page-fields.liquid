@@ -1,5 +1,5 @@
 <div style="margin-top: 20px;">
-    {% form 'customer', class: 'newsletter-form' %}
+    {% form 'contact', class: 'newsletter-form' %}
       {% for block in section.blocks %}
         {% case block.type %}
           {% when "email" %}
@@ -14,13 +14,6 @@
                   autocorrect="off"
                   autocapitalize="off"
                   autocomplete="email"
-                  {% if form.errors %}
-                    autofocus
-                    aria-invalid="true"
-                    aria-describedby="Newsletter-error--{{ section.id }}"
-                  {% elsif form.posted_successfully? %}
-                    aria-describedby="Newsletter-success--{{ section.id }}"
-                  {% endif %}
                   placeholder="{{ 'newsletter.label' | t }}"
                   required
                 >
