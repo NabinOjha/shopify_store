@@ -1,31 +1,28 @@
-<div>
-
-    {% form 'contact', class: 'newsletter-form' %}
-      <h2>{{ section.settings.heading }}</h2>
-      
-      {% for block in section.blocks %}
-          <div style="margin-top: 20px;">
-            <div class="field">
-              <input
-                type="email"
-                name="contact[email]"
-                class="field__input"
-                value="{{ form.email }}"
-                aria-required="true"
-                autocorrect="off"
-                autocapitalize="off"
-                autocomplete="email"
-                placeholder="{{ 'newsletter.label' | t }}"
-                required
-              >
-              <label class="field__label">
-                {{ 'newsletter.label' | t }}
-              </label>
-            </div>
-          </div>
-      {% endfor %}
-    {% endform %}
-</div>
+{% form 'contact', class: 'newsletter-form' %}
+  <h2>{{ section.settings.heading }}</h2>
+  
+  {% for block in section.blocks %}
+      <div style="margin-top: 20px;">
+        <div class="field">
+          <input
+            type="email"
+            name="contact[email]"
+            class="field__input"
+            value="{{ form.email }}"
+            aria-required="true"
+            autocorrect="off"
+            autocapitalize="off"
+            autocomplete="email"
+            placeholder="{{ 'newsletter.label' | t }}"
+            required
+          >
+          <label class="field__label">
+            {{ 'newsletter.label' | t }}
+          </label>
+        </div>
+      </div>
+  {% endfor %}
+{% endform %}
 
 {% schema %}
 {
