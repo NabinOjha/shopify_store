@@ -12,12 +12,36 @@
     "custom-fields": {
       "type": "custom-page-fields",
       "settings": {
-        "title": "Custom Section",
-        "description": "Custom Section Description"
+      }
+    },
+    "custom_page_fields_JtKEM8": {
+      "type": "custom-page-fields",
+      "blocks": {
+        "testimonial_7iLpVx": {
+          "type": "testimonial",
+          "settings": {
+            "customer_name": "Jane Smith",
+            "testimonial_text": "Absolutely fantastic service!"
+          }
+        },
+        "testimonial_BTNabm": {
+          "type": "testimonial",
+          "settings": {
+            "customer_name": "Emily Johnson",
+            "testimonial_text": "I loved the experience from start to finish!"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_7iLpVx",
+        "testimonial_BTNabm"
+      ],
+      "settings": {
       }
     }
   },
   "order": [
-    "custom-fields"
+    "custom-fields",
+    "custom_page_fields_JtKEM8"
   ]
 }
