@@ -124,7 +124,10 @@
               class="banner__heading inline-richtext {{ block.settings.heading_size }}"
               {{ block.shopify_attributes }}
             >
-              {{ block.settings.heading }}    
+              {{ block.settings.heading }}
+              {% for info in shop.metaobjects.nabins %}
+                <h1>Hello</h1>
+              {% endfor %}
               <h1>{{ metaobject.custom.store_info.phone }} hello</h1>
             </h2>
           {%- when 'text' -%}
