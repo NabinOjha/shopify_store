@@ -2,13 +2,8 @@
   <p>Hello</p>
   {% if section.blocks.size > 0 %}
     {% for block in section.blocks %}
-      <div class="slide" {{ block.shopify_attributes }}>
-        {% if block.settings.image %}
-          {{ block.settings.image | image_url: width: 2048 | image_tag }}
-        {% else %}
-          <p>No image assigned</p>
-        {% endif %}
-      </div>
+      {% case block.type %}
+      {% endcase %}
     {% endfor %}
   {% else %}
     <p>No blocks available</p>
