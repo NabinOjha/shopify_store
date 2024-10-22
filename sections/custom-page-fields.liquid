@@ -1,11 +1,18 @@
 <div>
   <p>Hello</p>
-  {% for block in section.blocks %}
+  {% if section.blocks.size > 0 %}
+    {% for block in section.blocks %}
       <div class="slide" {{ block.shopify_attributes }}>
-        {{ block.settings.image | image_url: width: 2048 | image_tag }}
+        {% if block.settings.image %}
+          {{ block.settings.image | image_url: width: 2048 | image_tag }}
+        {% else %}
+          <p>No image assigned</p>
+        {% endif %}
       </div>
-    <p>Hi</p>
-  {% endfor %}
+    {% endfor %}
+  {% else %}
+    <p>No blocks available</p>
+  {% endif %}
 </div>
 
 {% schema %}
