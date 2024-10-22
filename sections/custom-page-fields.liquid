@@ -1,44 +1,30 @@
-<div>
-  <p>Hello</p>
-  {% if section.blocks.size > 0 %}
-    {% for block in section.blocks %}
-      <div class="slide" {{ block.shopify_attributes }}>
-        {% if block.settings.image %}
-          {{ block.settings.image | image_url: width: 2048 | image_tag }}
-        {% else %}
-          <p>No image assigned</p>
-        {% endif %}
-      </div>
-    {% endfor %}
-  {% else %}
-    <p>No blocks available.</p>
-  {% endif %}
+<div class="{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+  {%- for block in section.blocks -%}
+    {% render block %}
+  {%- endfor -%}
 </div>
 
 {% schema %}
 {
-  "name": "Feedback Form",
+  "name": "t:sections.apps.name",
   "tag": "section",
   "class": "section",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "include_margins",
+      "default": true,
+      "label": "t:sections.apps.settings.include_margins.label"
+    }
+  ],
   "blocks": [
-     {
-       "name": "Slide",
-       "type": "slide",
-       "settings": [
-         {
-           "type": "image_picker",
-           "id": "image",
-           "label": "Image"
-         }
-       ]
-     }
-   ],
+    {
+      "type": "@app"
+    }
+  ],
   "presets": [
     {
-      "name": "t:sections.contact-form.presets.name"
+      "name": "t:sections.apps.presets.name"
     }
   ]
 }
