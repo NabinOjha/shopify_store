@@ -132,24 +132,28 @@
 
 {% schema %}
 {
-  "name": "Feedback Form",
+  "name": "Slideshow",
   "tag": "section",
-  "class": "section",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
+  "class": "slideshow",
   "settings": [
     {
-      "type": "inline_richtext",
-      "id": "heading",
-      "default": "Feedback Form",
-      "label": "Feedback Form"
+      "type": "text",
+      "id": "title",
+      "label": "Slideshow"
     }
   ],
-  "presets": [
-    {
-      "name": "t:sections.contact-form.presets.name"
-    }
-  ]
+  "blocks": [
+     {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+         }
+       ]
+     }
+   ]
 }
 {% endschema %}
