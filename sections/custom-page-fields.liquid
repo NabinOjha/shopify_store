@@ -19,6 +19,44 @@
       "label": "Description",
       "default": "Custom Section Description"
     }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "customer_name",
+          "label": "Customer Name"
+        },
+        {
+          "type": "textarea",
+          "id": "testimonial_text",
+          "label": "Testimonial Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "customer_image",
+          "label": "Customer Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default Testimonials",
+      "category": "Testimonials",
+      "blocks": [
+        {
+          "type": "testimonial"
+        },
+        {
+          "type": "testimonial"
+        }
+      ]
+    }
   ]
+
 }
 {% endschema %}
