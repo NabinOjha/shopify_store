@@ -1,32 +1,26 @@
 <div>
     {% form 'contact', class: 'newsletter-form' %}
-      {% if section.blocks.size > 0 %}
-        {% for block in section.blocks %}
-          {% if block.type == 'input' %}
-            <div style="margin-top: 20px;">
-              <div class="field">
-                <input
-                  type="email"
-                  name="contact[email]"
-                  class="field__input"
-                  value="{{ form.email }}"
-                  aria-required="true"
-                  autocorrect="off"
-                  autocapitalize="off"
-                  autocomplete="email"
-                  placeholder="{{ block.settings.placeholder }}"
-                  required
-                >
-                <label class="field__label">
-                  {{ block.settings.label }}
-                </label>
-              </div>
+      {% for block in section.blocks %}
+          <div style="margin-top: 20px;">
+            <div class="field">
+              <input
+                type="email"
+                name="contact[email]"
+                class="field__input"
+                value="{{ form.email }}"
+                aria-required="true"
+                autocorrect="off"
+                autocapitalize="off"
+                autocomplete="email"
+                placeholder="{{ 'newsletter.label' | t }}"
+                required
+              >
+              <label class="field__label">
+                {{ 'newsletter.label' | t }}
+              </label>
             </div>
-          {% endif %}
-        {% endfor %}
-      {% else %}
-        <p>No blocks available. Section: {{ section | json }}</p>
-      {% endif %}
+          </div>
+      {% endfor %}
     {% endform %}
 </div>
 
@@ -41,38 +35,25 @@
   "blocks": [
      {
        "name": "Input",
-       "type": "input",
+       "type": "richtext",
        "settings": [
          {
-           "type": "text",
-           "id": "label",
-           "label": "Label",
-           "default": "Email Address"
-         },
-         {
-           "type": "text",
-           "id": "placeholder",
-           "label": "Placeholder",
-           "default": "Enter your email"
+           "type": "richtext",
+           "id": "image",
+           "label": "Image"
          }
        ]
      }
    ],
   "presets": [
     {
-      "name": "Feedback Form",
-      "category": "Feedback",
+      "name": "t:sections.contact-form.presets.name",
       "blocks": [
         {
-          "type": "input",
-          "settings": {
-            "label": "Email Address",
-            "placeholder": "Enter your email"
-          }
+          "type": "richtext"
         }
       ]
     }
   ]
 }
 {% endschema %}
-
