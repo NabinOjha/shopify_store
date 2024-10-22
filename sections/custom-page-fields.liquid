@@ -1,17 +1,14 @@
 <div>
-  <p>Hello</p>
-  {% if section.blocks.size > 0 %}
-    {% for block in section.blocks %}
-      {% case block.type %}
-        {% when "email" %}
-        <p>Email</p>
-        {% when "feeback" %}
-        <p>Feedback</p>
-      {% endcase %}
-    {% endfor %}
-  {% else %}
-    <p>No blocks available</p>
-  {% endif %}
+    {% form 'customer', class: 'newsletter-form' %}
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when "email" %}
+          <p>Email</p>
+          {% when "feeback" %}
+          <p>Feedback</p>
+        {% endcase %}
+      {% endfor %}
+    {% endform %}
 </div>
 
 {% schema %}
