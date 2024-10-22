@@ -30,7 +30,8 @@
       endif
     -%}
     {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
-      {%- for block in section.blocks  %} <div class="newsletter-form__field-wrapper">
+      {%- for block in section.blocks  %} 
+        <div class="newsletter-form__field-wrapper">
           <div class="field">
             <input
               id="NewsletterForm--{{ section.id }}"
