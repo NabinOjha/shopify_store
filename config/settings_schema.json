@@ -1471,11 +1471,10 @@
     "settings": [
       {
         "type": "color",
-        "id": "announcement_text_color",
+        "id": "show_annoucement",
         "label": "Announcement Text Color",
-        "default": "#000000" // Default color (black)
+        "default": "#000000"
       }
-
     ]
   }
 ]
