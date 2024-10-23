@@ -1467,11 +1467,13 @@
     ]
   },
   {
-    "name": "Custom Header", 
+    "name": "Custom Header Text", 
     "settings": [
       {
         "type": "text",
-        "id": "custom_header"
+        "id": "custom_header",
+        "label": "Add Custom Header",
+        "default": "Custom Header Text"
       }
     ]
   }
