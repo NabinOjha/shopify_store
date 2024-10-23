@@ -1467,14 +1467,15 @@
     ]
   },
   {
-    "name": "Custom Header Text", 
+    "name": "Annoucement Color", 
     "settings": [
       {
-        "type": "text",
-        "id": "custom_header",
-        "label": "Add Custom Header",
-        "default": "Welcome to our shopify store"
+        "type": "color",
+        "id": "announcement_text_color",
+        "label": "Announcement Text Color",
+        "default": "#000000" // Default color (black)
       }
+
     ]
   }
 ]
