@@ -1467,7 +1467,7 @@
     ]
   },
   {
-    "name": "text", 
+    "name": "Custom Header", 
     "settings": [
       {
         "type": "header",
