@@ -1473,7 +1473,7 @@
         "type": "text",
         "id": "custom_header",
         "label": "Add Custom Header",
-        "default": "Custom Header Text"
+        "default": "Welcome to our shopify store"
       }
     ]
   }
