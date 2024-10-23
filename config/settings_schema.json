@@ -1465,5 +1465,14 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+    "name": "text", 
+    "settings": [
+      {
+        "type": "header",
+        "content": "Custom Header Setting"
+      }
+    ]
   }
 ]
