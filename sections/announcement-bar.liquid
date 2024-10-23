@@ -41,7 +41,7 @@
             >
           {%- endif -%}
           <p class="announcement-bar__message h5">
-            <span>{{ section.blocks.first.settings.text | escape }}</span>
+            <span style="color: {{ settings.announcement_text_color }}">{{ section.blocks.first.settings.text | escape }}</span>
             {%- if section.blocks.first.settings.link != blank -%}
               {{- 'icon-arrow.svg' | inline_asset_content -}}
             {%- endif -%}
