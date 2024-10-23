@@ -1470,8 +1470,8 @@
     "name": "Custom Header", 
     "settings": [
       {
-        "type": "header",
-        "content": "Custom Header Setting"
+        "type": "text",
+        "id": "custom_header"
       }
     ]
   }
